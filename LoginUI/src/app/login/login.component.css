@@ -1,0 +1,59 @@
+.example-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+}
+
+.container {
+  justify-content: center;
+  text-align: center;
+  padding: auto;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+.header {
+  padding: 10px;
+
+  text-align: center;
+
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(183, 231, 246, 1) 0%,
+    rgba(56, 143, 170, 1) 56%
+  );
+
+  color: white;
+
+  font-size: 40px;
+}
+
+footer {
+  background-attachment: fixed;
+
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(183, 231, 246, 1) 0%,
+    rgba(56, 143, 170, 1) 56%
+  );
+
+  padding: 10px;
+}

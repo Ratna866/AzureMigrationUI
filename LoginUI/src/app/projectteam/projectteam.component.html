@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        
+            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        
+        
+        <h1>AZ-Migration Portal</h1>
+        <div>Hello,{{ teamEmail }}</div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  
+  
+  <mat-sidenav-container>
+    <mat-sidenav class="sidenav" #sidenav opened="false">
+        <mat-nav-list>
+            <a href="/addapp" mat-list-item >Add Application</a>
+            <a href="/appEdit/:id" mat-list-item >Update Application</a>
+            <a href="delete" mat-list-item >delete Application</a>
+            <button class="b" (click)="logOut()">Log Out</button>
+
+            <!-- <a href="/applicationdetails" mat-list-item>Application Details</a>
+            <a href="/serverinformation" mat-list-item>Server Information</a>
+            <a href="databaseinformation" mat-list-item>Database Information</a>
+            <a href="portinformation" mat-list-item>Port Information</a>
+            <a href="storageinformation" mat-list-item>Storage Information</a> -->
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height:88vh;">
+            <body>
+               
+                    
+                </body>
+        </div>
+        
+    </mat-sidenav-content>
+  
+  </mat-sidenav-container>
+  
+  
+  
+  
+  
+  

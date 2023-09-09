@@ -1,0 +1,39 @@
+<div class="header">
+    <h2><img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20">Azure  Migration</h2>
+    </div>
+
+<footer class="footer fixed-bottom text-center">
+
+  <div className="col-md-4 d-flex align-items-center">
+
+    <img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20" className="cg-foot-logo mb-2"/>&nbsp; 2023 Capgemini. All rights reserved.
+
+</div>
+
+</footer>
+
+<div class="application-display-area" >
+    <h3>All Application</h3>
+    <table id="user" class="table">
+      <thead >
+        <tr >
+          <th scope="col">S No.</th>
+          <th scope="col">Client Email</th>
+          <th scope="col">Application Name</th>
+          <th scope="col">Server Information</th>
+          <th scope="col">Port Information</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let data of allApplications; index as i" >
+        <!-- *ngIf="searchText === '' || data.application_Name.toLowerCase.includes(searchText)" -->
+        <td>{{i+1}}</td>
+        <td>{{data.c_Email}}</td>
+        <td>{{data.application_Name}}</td>
+        <td>{{data.serverinfo}}</td>
+        <td>{{data.portinfo}}</td>
+      </tr>
+    </table>
+    <hr>
+    <div class="action-btn-container">
+    </div>
+  </div>

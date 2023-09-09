@@ -1,0 +1,21 @@
+h1{
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.b{
+
+    position: absolute;
+    
+    bottom: 10%;
+    
+    left: 20%;
+    }
+    
+    .d{
+
+        position: absolute;
+        
+        left: 80%;
+        
+        }

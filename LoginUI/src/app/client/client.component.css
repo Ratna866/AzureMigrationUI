@@ -1,0 +1,211 @@
+.sidenav{
+
+ 
+
+  background-color:aliceblue;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+h1{
+
+ 
+
+  position: absolute;
+
+ 
+
+  left: 50px;
+
+ 
+
+  top:12px;
+
+ 
+
+}
+
+ 
+
+body{
+
+ 
+
+ position: absolute;
+
+ 
+
+ width: 100%;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+.d{
+
+ 
+
+position: absolute;
+
+ 
+
+left: 80%;
+
+ 
+
+}
+
+ 
+
+.b{
+
+ 
+
+  position: absolute;
+
+ 
+
+  bottom: 10%;
+
+ 
+
+  left: 20%;
+
+  }
+
+ 
+
+ 
+
+.search{
+
+ 
+
+position: absolute;
+
+ 
+
+left:62%;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+.button{
+
+ 
+
+position: absolute;
+
+ 
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+.sidebar{
+
+ 
+
+background-color: rgb(13, 25, 28);
+
+ 
+
+color: whitesmoke;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+h2{
+
+ 
+
+text-align: center;
+
+ 
+
+top: 20px;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+button{
+
+ 
+
+border-radius: -1;
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+table {
+
+  width: 100%;
+
+}
+
+ 
+
+th.mat-sort-header-sorted {
+
+  color: black;
+
+}

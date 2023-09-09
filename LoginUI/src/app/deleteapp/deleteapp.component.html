@@ -1,0 +1,20 @@
+<body>
+
+  <div class="container">
+    <div class="card">
+      <h2>Delete Application</h2>
+      <div>
+        <label for="appId" class="form-label">Application ID:</label>
+        <input type="number" class="form-control" id="appId" [(ngModel)]="applicationId"><br>
+        <button class="btn btn-danger" (click)="deleteApplication()">Delete</button>
+      </div>
+      <div *ngIf="deletedApplication">
+        <p>Application with ID {{ deletedApplication.C_Id }} has been deleted.</p>
+      </div>
+      <div *ngIf="error">
+        <p>Error deleting the application: {{ error }}</p>
+      </div>
+    </div>
+  </div>
+  
+  </body>

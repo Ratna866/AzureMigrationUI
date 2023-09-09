@@ -1,0 +1,136 @@
+<div class="header">
+  <h2><img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20">Azure  Migration</h2>
+  </div>
+
+<footer class="footer fixed-bottom text-center">
+
+<div className="col-md-4 d-flex align-items-center">
+
+  <img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20" className="cg-foot-logo mb-2"/>&nbsp; 2023 Capgemini. All rights reserved.
+
+</div>
+
+</footer>
+
+<body>
+
+  <!-- <div class="container">
+    <div class="card">
+      <div>
+        <h1 class="mb-4">Edit Application Details</h1>
+        <hr>
+      </div>
+      <div class="form">
+        <form #applicationsForm="ngForm" (ngSubmit)="onUpdate()">
+  
+          <div class="mb-3">
+            <label for="id" class="form-label">Id</label>
+            <input type="text" class="form-control" placeholder="Id" id="id" readonly
+              name="id" [(ngModel)]="appDetail.C_Id">
+          </div>
+  
+          <div class="mb-3">
+            <label for="C_Name" class="form-label">C_Name</label>
+            <input type="text" class="form-control" placeholder="C_Name" id="C_Name"
+              name="C_Name" [(ngModel)]="appDetail.C_Name">
+          </div>
+  
+          <div class="mb-3">
+            <label for="Application_Name" class="form-label">Application Name</label>
+            <input type="text" class="form-control" placeholder="Application Name" id="Application_Name"
+              name="Application_Name" [(ngModel)]="appDetail.Application_Name">
+          </div>
+  
+          <div class="mb-3">
+            <label for="ServerInfo" class="form-label">Server Info</label>
+            <input type="text" class="form-control" placeholder="Server Info" id="ServerInfo"
+              name="ServerInfo" [(ngModel)]="appDetail.ServerInfo">
+          </div>
+  
+          <div class="mb-3">
+            <label for="PortInfo" class="form-label">Port Info</label>
+            <input type="text" class="form-control" placeholder="Port Info" id="PortInfo"
+              name="PortInfo" [(ngModel)]="appDetail.PortInfo">
+          </div>
+  
+          
+            <button type="submit" class="btn btn-primary">UPDATE</button>&nbsp;
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink="/client">Close</button>
+         
+        </form>
+      </div>
+    </div>
+  </div> -->
+  
+
+
+  <div class="main-area">
+    <div class="content-area">
+      <div class="header">
+        <h1>Update Application</h1>
+        <hr>
+      </div>
+      <div class="container">
+        <!--Add application form-->
+        <div class="form-area">
+          <h3>Create Application</h3>
+          <form #applicationForm="ngForm" (ngSubmit)="onApplicationCreate(applicationForm.value)">
+            <label>Client Name</label>
+            <input type="text" name="c_name" ngModel>
+  
+            <label>Application Name</label>
+            <input type="text" name="application_Name" ngModel>
+  
+            <label>Server Information</label>
+            <input type="text" name="serverinfo" ngModel>
+  
+            <label>Port Information</label>
+            <input type="text" name="portinfo" ngModel>
+  
+            <input type="submit" value="Update Application">
+          </form>
+          <div class="top-button">
+            <button id="button" class="btn btn-primary" routerLink="/client">Back</button>
+          </div>
+        </div>
+  
+        <!--Display application area-->
+        <div class="application-display-area" >
+          <h3>All Application</h3>
+          <table id="application" >
+            <thead >
+              <tr >
+                <th scope="col">S No.</th>
+                <th scope="col">Client Name</th>
+                <th scope="col">Application Name</th>
+                <th scope="col">Server Information</th>
+                <th scope="col">Port Information</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tr *ngFor="let data of allApplications; index as i" >
+              <!-- *ngIf="searchText === '' || data.application_Name.toLowerCase.includes(searchText)" -->
+              <td>{{i+1}}</td>
+              <td>{{data.c_Name}}</td>
+              <td>{{data.application_Name}}</td>
+              <td>{{data.serverinfo}}</td>
+              <td>{{data.portinfo}}</td>
+              <td>
+                <button mat-icon-button class="btn btn-edit" (click)="onEditClicked(data.c_Id)">            
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button class="btn btn-delete" (click)="deleteApplication(data.c_Id);">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+            </tr>
+          </table>
+          <hr>
+          <div class="action-btn-container">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>

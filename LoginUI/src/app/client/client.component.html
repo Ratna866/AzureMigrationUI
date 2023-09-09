@@ -1,0 +1,230 @@
+<mat-toolbar color="primary">
+
+  <mat-toolbar-row>
+
+          <!-- <mat-icon (click)="sidenav.toggle();">menu</mat-icon> -->
+
+      <h1>AZ-Migration Portal</h1>
+
+      <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+
+      <div class="d">
+
+        <p>Hello {{ clientEmail }}</p>
+
+      </div>
+
+
+
+      <!-- <div class="search">
+
+          <input type="text"  placeholder="Enter search query">
+
+          <button mat-icon-button class="button">
+
+            <mat-icon>search</mat-icon>
+
+          </button>
+
+        </div> -->
+
+
+
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+
+
+<mat-sidenav-container>
+
+    <mat-sidenav class="sidenav" #sidenav opened="false">
+
+        <mat-nav-list>
+
+            <a href="/addapp" mat-list-item >Add Application</a>
+
+            <a href="/appEdit/:id" mat-list-item >Update Application</a>
+
+            <a href="delete" mat-list-item >delete Application</a>
+
+           
+
+            <a href="/applications/:id" mat-list-item>Application Details</a>
+
+            <a href="/serverList" mat-list-item>Server Information</a>
+
+            <a href="/serverappdata" mat-list-item>App Server Information</a>
+
+            <button class="b" (click)="logOut()">Log Out</button>
+
+            <!-- <a href="portinformation" mat-list-item>Port Information</a>
+
+            <a href="storageinformation" mat-list-item>Storage Information</a> -->
+
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <div style="height:88vh;">
+
+            <body>
+
+                <!-- <table class="table" *ngIf="allApplications">
+
+                    <thead>
+
+                      <tr>
+
+                        <th>ID</th>
+
+                        <th>Name</th>
+
+                        <th>Application</th>
+
+                        <th>Server Info</th>
+
+                        <th>Port Info</th>
+
+                      </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                      <tr *ngFor="let app of allApplications">
+
+                        <td>{{ app.c_Id}}</td>
+
+                        <td>{{ app.c_Name}}</td>
+
+                        <td>{{ app.application_Name}}</td>
+
+                        <td>{{ app.serverinfo}}</td>
+
+                        <td>{{ app.portinfo}}</td>
+
+                      </tr>
+
+                    </tbody>
+
+                  </table> -->
+
+
+
+                  <!-- <h2>Welcome to Dashboard</h2> -->
+
+                  <div>
+
+                    <h2>Data for Client: {{ clientEmail }}</h2>
+
+                    <table mat-table [dataSource]="userElements" matSort class="mat-elevation-z8">
+
+
+
+                      <!-- Position Column -->
+
+                      <ng-container matColumnDef="position">
+
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+
+                          S No.
+
+                        </th>
+
+                        <td mat-cell *matCellDef="let data; let i = index">{{ i + 1 }}</td>
+
+                      </ng-container>
+
+                   
+
+                      <!-- Name Column -->
+
+                      <ng-container matColumnDef="name">
+
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
+
+                          Application Name
+
+                        </th>
+
+                        <td mat-cell *matCellDef="let data">{{ data.application_Name }}</td>
+
+                      </ng-container>
+
+                   
+
+                      <!-- Server Information Column -->
+
+                      <ng-container matColumnDef="serverinfo">
+
+                        <th mat-header-cell *matHeaderCellDef>
+
+                          Server Information
+
+                        </th>
+
+                        <td mat-cell *matCellDef="let data">{{ data.serverinfo }}</td>
+
+                      </ng-container>
+
+                   
+
+                      <!-- Port Information Column -->
+
+                      <ng-container matColumnDef="portinfo">
+
+                        <th mat-header-cell *matHeaderCellDef>
+
+                          Port Information
+
+                        </th>
+
+                        <td mat-cell *matCellDef="let data">{{ data.portinfo }}</td>
+
+                      </ng-container>
+
+                   
+
+                      <!-- Header row -->
+
+                      <tr mat-header-row *matHeaderRowDef="['position', 'name', 'serverinfo', 'portinfo']"></tr>
+
+                   
+
+                      <!-- Data rows -->
+
+                      <tr mat-row *matRowDef="let row; columns: ['position', 'name', 'serverinfo', 'portinfo']"></tr>
+
+                    </table>
+
+                   
+
+                  </div>
+
+                 
+
+                 
+
+
+
+
+
+
+
+                </body>
+
+        </div>
+
+       
+
+    </mat-sidenav-content>
+
+ 
+
+  </mat-sidenav-container>
+
+ 
+

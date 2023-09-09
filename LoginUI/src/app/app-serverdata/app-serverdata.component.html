@@ -1,0 +1,73 @@
+
+
+<div class="header">
+    <h2><img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20">Azure  Migration</h2>
+</div>
+  
+    <footer class="footer fixed-bottom text-center">
+  
+      <div className="col-md-4 d-flex align-items-center">
+    
+        <img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20" className="cg-foot-logo mb-2"/>&nbsp; 2023 Capgemini. All rights reserved.
+    
+    </div>
+
+    </footer>
+
+
+    <!-- <div class="tables-container">
+      <table id="app" mat-table [dataSource]="ApplicationData" class="custom-table">
+        <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+          <th mat-header-cell *matHeaderCellDef> {{ column }} </th>
+          <td mat-cell *matCellDef="let element"> {{ element[column] }} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <table id="server" mat-table [dataSource]="serverData" class="custom-table">
+        <ng-container *ngFor="let column of display" [matColumnDef]="column">
+          <th mat-header-cell *matHeaderCellDef> {{ column }} </th>
+          <td mat-cell *matCellDef="let element"> {{ element[column] }} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="display"></tr>
+        <tr mat-row *matRowDef="let row; columns: display;"></tr>
+      </table>
+    </div> -->
+
+
+
+   <table mat-table [dataSource]="combinedData">
+
+  <!-- Define header columns -->
+  <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+    <th mat-header-cell *matHeaderCellDef> {{ column }} </th>
+    <td mat-cell *matCellDef="let element"> {{ element[column] }} </td>
+  </ng-container>
+
+  <!-- Define header row -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+  <!-- Define data rows -->
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+  <!-- serverId and serverLabel Column -->
+  <td mat-cell *matCellDef="let server"> {{ server.serverId }} </td>
+<td mat-cell *matCellDef="let server"> {{ server.serverLabel }} </td>
+
+  <!-- Application Server Column -->
+  <ng-container matColumnDef="ApplicationServer">
+    <th mat-header-cell *matHeaderCellDef> Application Server </th>
+    <td mat-cell *matCellDef="let element"> 
+      <ng-container *ngFor="let server of element.applicationServer">
+        <strong>Server Id:</strong> {{ server.ServerId }} - <strong>Server Label:</strong> {{ server.ServerLabel }}
+      </ng-container>
+    </td>
+    
+  </ng-container>
+
+</table>
+
+      
+      
+  

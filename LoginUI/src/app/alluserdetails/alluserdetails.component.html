@@ -1,0 +1,110 @@
+<style>
+  /* Add some styles for the table and its cells */
+  .table {
+    background-color: #f9f9f9; /* Light gray background color */
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px; /* Adjust this value based on your design */
+    margin: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .table th, .table td {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .table th {
+    background-color: #6ab9d1; /* Light gray header background color */
+  }
+
+  .table td {
+    background-color: #ffffff; /* White cell background color */
+  }
+
+  /* Add styles for the delete button */
+  .btn-delete {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+</style>
+
+    <div class="header">
+        <h2><img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20">Azure  Migration</h2>
+        </div>
+    
+    <footer class="footer fixed-bottom text-center">
+  
+      <div className="col-md-4 d-flex align-items-center">
+    
+        <img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20" className="cg-foot-logo mb-2"/>&nbsp; 2023 Capgemini. All rights reserved.
+    
+    </div>
+    
+    </footer>
+
+    <body>
+          <!-- <div class="header">
+            <h1>All Users </h1>
+            <hr>
+          </div> -->
+            <!--Add application form-->
+            <!-- <div class="form-area">
+              <h3>Create Application</h3>
+              <form #userForm="ngForm" (ngSubmit)="onUserCreate(userForm.value)">
+                <label>Name</label>
+                <input type="text" name="name" ngModel>
+      
+                <label>Email</label>
+                <input type="email" name="emailId" ngModel>
+
+                <label>Password</label>
+                <input type="text" name="role" ngModel>
+
+                <label>Role</label>
+                <input type="text" name="role" ngModel>
+      
+                <input type="submit" value="Add User">
+              </form>
+            </div> -->
+      
+            <!--Display application area-->
+              <table id="user" class="table" >
+                <thead >
+                  <tr >
+                    <th scope="col">S No.</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tr *ngFor="let data of allUsers; index as i" >
+                  <!-- *ngIf="searchText === '' || data.application_Name.toLowerCase.includes(searchText)" -->
+                  <td>{{i+1}}</td>
+                  <td>{{data.name}}</td>
+                  <td>{{data.emailId}}</td>
+                  <td>{{data.password}}</td>
+                  <td>{{data.role}}</td>
+                  <td>
+                    <!-- <button class="btn btn-edit" (click)="onEditClicked(data.loginId)">Edit</button> -->
+                    <button class="btn btn-delete" (click)="deleteApplication(data.loginId);">Delete</button>
+                  </td>
+                </tr>
+              </table>
+              <hr>
+              <div class="action-btn-container">
+              </div>
+           
+      <div class="d">
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" routerLink="/signup">Add User</button>
+   <br>
+      <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" routerLink="/admin">Back</button>
+  </div>
+        </body>

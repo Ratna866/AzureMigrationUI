@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+      
+          <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+      <h1>AZ-Migration Portal</h1>
+      <div class="d">Hello {{ adminEmail }}</div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+<mat-sidenav-container>
+  <mat-sidenav class="sidenav" #sidenav opened="false">
+      <mat-nav-list>
+          <a href="/AllUser" mat-list-item>Get All User</a>
+          <a href="/homeAdmin" mat-list-item >Applications</a>
+          <a href="/d3app" mat-list-item>sankey-diagram</a>
+          <a href="/signup" mat-list-item>Add User</a>
+          <a href="/UploadFile" mat-list-item>Add ApplicationList</a>
+          <button class="b" (click)="logOut()">Log Out</button>
+        </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <div style="height:88vh;">
+          <body>
+              <div class="p-5 mb-4 bg-light rounded-3">
+                  <div class="container-fluid py-5">
+                      <h1 class="display-5 fw-bold">Welcome to AZ-MigrationPortal</h1>
+                       <p class="col-md-8 fs-4"></p>
+                       
+                  </div>
+              </div>
+                  
+                  
+              </body>
+      </div>
+      
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+
+

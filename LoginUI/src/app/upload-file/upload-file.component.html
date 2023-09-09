@@ -1,0 +1,39 @@
+<div class="header">
+    <h2><img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20">Azure  Migration</h2>
+    </div><br>
+    <body>
+        
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="upload-section">
+              <h2 class="mb-3">Upload Server File</h2>
+              <label class="form-label">Select File</label>
+              <input type="file" class="form-control mb-3" (change)="onFileSelected($event)">
+              <button (click)="onUpload()" class="btn btn-primary">Upload</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="upload-section">
+              <h2 class="mb-3">Upload Application File</h2>
+              <label class="form-label">Select File</label>
+              <input type="file" class="form-control mb-3" (change)="uploadFile()">
+              <button (click)="uploadFile()" class="btn btn-primary">Upload</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top-button">
+        <button id="button" class="btn btn-primary" routerLink="/admin">Back</button>
+      </div>
+    </body>
+    <footer class="footer fixed-bottom text-center">
+  
+      <div className="col-md-4 d-flex align-items-center">
+    
+        <img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20" className="cg-foot-logo mb-2"/>&nbsp; 2023 Capgemini. All rights reserved.
+    
+    </div>
+    
+    </footer>

@@ -1,0 +1,97 @@
+th{
+
+    background-color: rgb(72, 198, 223);
+    
+    color: whitesmoke;
+    height: 40px;
+    
+    }
+    
+   tr-mat-header-row{
+    
+    height: 40px;
+    
+    }
+    
+   tr{
+    
+    height: 10px;
+    
+    }
+  
+    td{
+      height: 10px;
+    }
+    
+    
+    
+    
+    table tr:nth-child(odd){
+    
+    background-color: white ;
+    
+    }
+  
+    table tr:nth-child(even){
+    
+      background-color:rgb(198, 216, 214) ;
+      
+      } 
+  
+  .admin {
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    height: 50px;
+    margin-top: 10px;
+  }
+  
+    .header {
+    padding: 10px;
+     height: 60px;
+    text-align: center;
+  
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(183, 231, 246, 1) 0%,
+      rgba(56, 143, 170, 1) 56%
+    );
+  
+    color: white;
+  
+    font-size: 40px;
+  }
+  
+  footer {
+    background-attachment: fixed;
+  
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(183, 231, 246, 1) 0%,
+      rgba(56, 143, 170, 1) 56%
+    );
+  
+    padding: 10px;
+  }
+  body {
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  .table-container {
+    max-width: 200%;
+    margin: 0 auto;
+  }
+  .delete-button {
+    padding: 5px 10px;
+  }
+  .back-button {
+    position: relative;
+    margin-bottom:1px;
+    display: block;
+    width: 60px;
+  } 
+  
+  

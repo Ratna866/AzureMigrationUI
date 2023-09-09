@@ -1,0 +1,108 @@
+<div class="header">
+  <h2><img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20">Azure  Migration</h2>
+  </div>
+
+  <footer class="footer fixed-bottom text-center">
+
+    <div className="col-md-4 d-flex align-items-center">
+  
+      <img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20" className="cg-foot-logo mb-2"/>&nbsp; 2023 Capgemini. All rights reserved.
+  
+  </div>
+  
+  </footer>
+
+<mat-card id="ctrlspecbuilder">
+  <div class="container-tab mat-elevation-z8">
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+        <h1>Log In</h1>
+        <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>EmailId</mat-label>
+            <input matInput name="emailId" formControlName="emailId"
+              placeholder="Enter your emailId">
+            <!-- <mat-hint align="end">{{input.value.length}}/10</mat-hint> -->
+            <mat-error *ngIf="EmailId.errors?.['required'] && (EmailId.touched || EmailId.dirty)">EmailId is
+              Required.</mat-error>
+              <mat-error *ngIf="EmailId.errors?.['email'] && (EmailId.touched || EmailId.dirty)">EmailId is
+                Invalid</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+                  <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+                   <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                   <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon></button>
+                  
+                   <mat-error *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)"> Password is Required. </mat-error>
+                   <mat-error *ngIf="Password.errors?.['minlength'] || Password.errors?.['maxlength'] &&(Password.touched || Password.dirty)">
+                   Password should be at least 6 and at the max 15 characters long.</mat-error>
+               </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a role...</mat-label>
+          <mat-select formControlName="Role">
+            <mat-option [value]="Role" *ngFor="let Role of RoleA">{{Role}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="Role.errors?.['required'] && (Role.touched || Role.dirty)">Please choose a
+            role</mat-error>
+        </mat-form-field>
+
+        <div class="example-container">
+          <div class="row">
+            <div class="col-6 offset-3">
+              <div class="d-grid">
+                <button type="submit" mat-raised-button mat-button style="background-color: #17a2b8; color: white;"
+                  [disabled]="loginForm.invalid">Login</button>
+              </div>
+              <div class="not">
+                <a href="/signup">Signup</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 offset-3">
+          <div class="d-grid">
+            <div class="form-inline fr mt-4">
+              <a id="forgot" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="font-weight-bold"><a routerLink="">forgot password?</a></a>
+              </div>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </div>
+</mat-card>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <p class="modal-title" id="exampleModalLabel"> <span style="font-size: 25px;font-weight:700">Forget your password?</span><br>
+                  <small>Please provide your E-mail we will send the reset link</small></p>
+
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          </div>
+
+          <div class="modal-body">
+              <div class="form-group pt-3">
+                  <div class="input-field"> <span class="fa fa-user p-2"></span> <input [(ngModel)]="resetPasswordEmail" (ngModelChange)="checkValidEmail($event)" type="text" placeholder="Email"> </div>
+              </div>
+              <small *ngIf="!resetPasswordEmail" class="text-danger">*Email is required*</small>
+              <small *ngIf="!isValidEmail && resetPasswordEmail" class="text-danger">*Email is Invalid*</small>
+
+          </div>
+          <div class="modal-footer">
+              <button id="closeBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" (click)="confirmToSend()" class="btn btn-primary">Send</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- (click)="navigateToFirst()" -->

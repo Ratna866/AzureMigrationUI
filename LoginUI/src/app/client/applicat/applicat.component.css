@@ -1,0 +1,119 @@
+/* body {
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  label {
+    font-weight: bold;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }body {
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  table, th, td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: center;
+  }
+  .alert {
+    margin-top: 20px;
+  } */
+
+  /* You can apply Bootstrap table styling here */
+/* For example: */
+
+.example-container {
+    height: 400px;
+    width: 550px;
+    max-width: 100%;
+    overflow: auto;
+  }
+  
+  table {
+    width: 800px;
+  }
+  
+  td.mat-column-star {
+    width: 20px;
+    padding-right: 8px;
+  }
+  
+  th.mat-column-position, td.mat-column-position {
+    padding-left: 8px;
+  }
+  
+  .mat-mdc-table-sticky-border-elem-right {
+    border-left: 1px solid #e0e0e0;
+  }
+  
+  .mat-mdc-table-sticky-border-elem-left {
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  @media (min-width: 768px) {
+    .example-container {
+      width: 99%; /* Adjust width to fill available space */
+      height: 80%; /* Allow the height to adjust based on content */
+      max-width: none; /* Disable max-width */
+    }
+  
+    table {
+      width: 100%; /* Adjust table width to fill the container */
+    }
+  
+    td.mat-column-star {
+      width: 40px; /* Increase width for better visibility */
+      padding-right: 16px; /* Adjust padding for better spacing */
+    }
+  }
+  
+
+  
+  .header {
+    padding: 10px;
+    text-align: center;
+  
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(183, 231, 246, 1) 0%,
+      rgba(56, 143, 170, 1) 56%
+    );
+  
+    color: white;
+  
+    font-size: 40px;
+  }
+  
+  footer {
+    background-attachment: fixed;
+  
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(183, 231, 246, 1) 0%,
+      rgba(56, 143, 170, 1) 56%
+    );
+  
+    padding: 10px;
+  }
+
+  .button{
+
+    position: absolute;
+    
+    
+    
+    }
+    
+  

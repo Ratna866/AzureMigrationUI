@@ -1,0 +1,60 @@
+<div class="header">
+  <h2><img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20">Azure  Migration</h2>
+  </div>
+
+<footer class="footer fixed-bottom text-center">
+
+<div className="col-md-4 d-flex align-items-center">
+
+  <img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20" className="cg-foot-logo mb-2"/>&nbsp; 2023 Capgemini. All rights reserved.
+
+</div>
+
+</footer>
+<body>
+
+<div class="container">
+  <div class="card">
+    <div>
+      <h1>Add Application Details</h1>
+      <hr>
+    </div>
+    <div class="form">
+      <form #applicationsForm="ngForm" (ngSubmit)="addApplicationData()">
+
+        <div class="mb-3">
+          <label class="form-label">C_Email</label>
+          <input type="text" class="form-control" placeholder="Client Email"
+            name="C_Email" [(ngModel)]="addApp.C_Email">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Application Name</label>
+          <input type="text" class="form-control" placeholder="Application Name"
+            name="Application_Name" [(ngModel)]="addApp.Application_Name">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Server Info</label>
+          <input type="text" class="form-control" placeholder="Server Info"
+            name="ServerInfo" [(ngModel)]="addApp.ServerInfo">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Port Info</label>
+          <input type="text" class="form-control" placeholder="Port Info"
+            name="PortInfo" [(ngModel)]="addApp.PortInfo">
+        </div>
+
+        <button  type="submit" class="btn btn-primary">ADD</button>&nbsp;
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink="/client">Close</button>
+      </form>
+      <!-- Modal Form Ends -->
+    </div>
+  </div>
+</div>
+<div class="top-button">
+  <button id="button" class="btn btn-primary" routerLink="/admin">Back</button>
+</div>
+
+</body>
